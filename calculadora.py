@@ -7,10 +7,9 @@ def media_suicida (mediaProvas, mediaTrabalhos):
         elif mediaProvas > mediaTrabalhos:
             mediaFinal = mediaTrabalhos
         else:
-            mediaFinal = mediaProvas
+            mediaFinal = min(mediaProvas, mediaTrabalhos)
 
     return mediaFinal
-
 
 notasProva = []
 notasTrabalho = []
@@ -27,18 +26,7 @@ for item in range(quantidadeTrabalho):
     n = float(input("Nota do trabalho {}: ".format(item + 1)))
     notasTrabalho.append((n))
 
-auxiliar = 0
-
-for item in notasProva:
-    auxiliar += item
-
-mediaProva = auxiliar / len(notasProva)
-
-auxiliar = 0
-
-for item in notasTrabalho:
-    auxiliar += item
-
-mediaTrabalho = auxiliar / len(notasTrabalho)
+mediaProva = sum(notasProva) / quantidadeProva
+mediaTrabalho = sum(notasTrabalho) / quantidadeTrabalho
 
 print("Media final = {}".format(media_suicida(mediaProva, mediaTrabalho)))
