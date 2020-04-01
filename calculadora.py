@@ -1,8 +1,7 @@
 def media_suicida (mediaProvas, mediaTrabalhos):
     if mediaProvas >= 5 and mediaTrabalhos >= 5:
-        mediaFinal = mediaProvas * 0.6 + mediaTrabalhos * 0.4
-    elif mediaProvas < 5 or mediaTrabalhos < 5:
-        mediaFinal = min(mediaProvas, mediaTrabalhos)
+        return mediaProvas * 0.6 + mediaTrabalhos * 0.4
+    return min(mediaProvas, mediaTrabalhos)
 
     return mediaFinal
 
