@@ -3,8 +3,6 @@ def media_suicida (mediaProvas, mediaTrabalhos):
         return mediaProvas * 0.6 + mediaTrabalhos * 0.4
     return min(mediaProvas, mediaTrabalhos)
 
-    return mediaFinal
-
 notasProva = []
 notasTrabalho = []
 
